@@ -182,5 +182,41 @@ function mileToFeet (mile){
 const myOfiiceToHome = 100;
  var convertedKm = mileToFeet(myOfiiceToHome);
 
- console.log(convertedKm);
+//  console.log(convertedKm);
 
+ 
+ /* Peter's school teacher asked him to write a program that would return true if a number is even and false if a number
+is odd. Help Peter write the program.
+Input:
+The first and second input lines contain the numbers.
+Output:
+
+ Print true if the number is an even number and false if the number is an odd number.
+ */
+
+function evenOdd (number){
+   const reminder = number % 2;
+    if (reminder===0){
+        return "even";
+    }
+    else{
+        return "odd";
+    }
+}
+
+const cheackNumber = evenOdd(5)
+// console.log(cheackNumber);
+
+
+function isLeapYear (year){
+    const reminder = year %4;
+    if(reminder===0)
+    return true;
+    else{
+        return false;
+    }
+}
+
+const input = 1953;
+var results = isLeapYear(input);
+console.log(results);
