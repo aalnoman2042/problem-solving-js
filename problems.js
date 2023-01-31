@@ -4,11 +4,10 @@ var harrysMomGiven = 1100;
 var orangePrice = 700;
 var applePrice = 100;
 
-if (harrysMomGiven > orangePrice+applePrice) {
-    // console.log (  harrysMomGiven- (orangePrice+applePrice)  );
-}
-else{
-    // console.log("not enough money to buy orange");
+if (harrysMomGiven > orangePrice + applePrice) {
+  // console.log (  harrysMomGiven- (orangePrice+applePrice)  );
+} else {
+  // console.log("not enough money to buy orange");
 }
 
 /* Write a program to calculate the average marks of Mathematics, Biology, Chemistry, Physics, and
@@ -18,20 +17,18 @@ Sample Input:
 75.25, 65, 80, 35.45, 99.50
 
 */
-    
-var  Mathematics = 75.25;
-var  Biology = 65;
-var  Chemistry = 80;
-var  Physics = 35.45;
-var  Bangla = 99.50;
- var totalMarks = Bangla+Physics+Chemistry+Biology+Mathematics;
+
+var Mathematics = 75.25;
+var Biology = 65;
+var Chemistry = 80;
+var Physics = 35.45;
+var Bangla = 99.5;
+var totalMarks = Bangla + Physics + Chemistry + Biology + Mathematics;
 
 var average = totalMarks / 5;
 
-//  console.log(average.toFixed(2)); 
+//  console.log(average.toFixed(2));
 
-
- 
 /* John’s teacher gave him two variables. Each variable contains a string. John’s teacher asked him to
 combine these two strings and print them in one line. Help John write the program. 
 
@@ -41,10 +38,10 @@ an awesome web developer
 
 */
 
-var a = "i am going to be"
-var b = "an awesome web developer"
+var a = "i am going to be";
+var b = "an awesome web developer";
 
-var c = a +" "+ b;
+var c = a + " " + b;
 // console.log(c);
 
 /* Sarah’s mother is teaching her mathematics. She gave Sarah a number and asked her what the
@@ -61,7 +58,6 @@ var reminderAns = number % haveToDivideWith;
 
 // console.log(reminderAns);
 
-
 /* 
 You are given an array:
 
@@ -71,20 +67,18 @@ a) Find the index of ‘Banana’ and replace ‘Banana’ with ‘Mango’.
 b) Remove ‘Orange’ and add ‘Watermelon’.
 */
 
-var fruits = ['Apple', 'Banana', 'Orange'];
+var fruits = ["Apple", "Banana", "Orange"];
 
 var indexBanana = fruits.indexOf("Banana");
 
-
 //  console.log("index of banana is" + " " + indexBanana);
 
- fruits[1] = "Mango"
+fruits[1] = "Mango";
 //  console.log(fruits);
 
- fruits.pop()
- fruits.push("Watermelon")
+fruits.pop();
+fruits.push("Watermelon");
 //  console.log(fruits);
-
 
 /* 
 You and your friends Tom, Jane, Peter and John got their final exam results. Your total
@@ -99,93 +93,84 @@ and John’s total score is 40. The grading chart is
 
 var TotalScore = 0;
 
-if ( TotalScore  >= 80){
-    // console.log("you got A grade");
-}
-else if (TotalScore >=60 && TotalScore <80){
-    // console.log("you got B grade");
-}
-else if (TotalScore >= 50  && TotalScore <60){
-    // console.log("you got C grade");
-}
-else if( TotalScore >= 40 && TotalScore< 50 ){
-    // console.log("you got D grade");
-}
-else {
-    // console.log("fail vai");
+if (TotalScore >= 80) {
+  // console.log("you got A grade");
+} else if (TotalScore >= 60 && TotalScore < 80) {
+  // console.log("you got B grade");
+} else if (TotalScore >= 50 && TotalScore < 60) {
+  // console.log("you got C grade");
+} else if (TotalScore >= 40 && TotalScore < 50) {
+  // console.log("you got D grade");
+} else {
+  // console.log("fail vai");
 }
 
 /* 
 You are given three numbers 13, 79, and 45. Write a program that will print the
 largest number using if-else.
  */
- var a = 13;
- var b = 79;
- var c = 45;
+var a = 13;
+var b = 79;
+var c = 45;
 
- if ( a > b && a > c){
-    // console.log("a is largest");
- }
- else if (b > a && b > c ){
-    // console.log("b is largest");
- }
- else  {
-    // console.log("c is largest");
- }
+if (a > b && a > c) {
+  // console.log("a is largest");
+} else if (b > a && b > c) {
+  // console.log("b is largest");
+} else {
+  // console.log("c is largest");
+}
 
- /* 
+/* 
  You are given a triangle with the sides 9, 8, 9. Write a program to check whether a
 triangle is Isosceles or not using if-else.
  */
- var side1 = 9;
- var side2 = 8;
- var side3 = 10;
+var side1 = 9;
+var side2 = 8;
+var side3 = 10;
 
- if(side1==side2 || side1==side3 || side2==side3) {
-    // console.log("triangle is isoceles");
- }
- else{
-    // console.log("triangle is not isoceles");
- }
+if (side1 == side2 || side1 == side3 || side2 == side3) {
+  // console.log("triangle is isoceles");
+} else {
+  // console.log("triangle is not isoceles");
+}
 
 /* 
 display ajke amr mon valo nei 98 times
 d*/
 
-var haha = "aske amr mon valo nei"
-for (var i=1; i<= 98; i++ ){
-    // console.log(haha);
+var haha = "aske amr mon valo nei";
+for (var i = 1; i <= 98; i++) {
+  // console.log(haha);
 }
-
 
 /* Unit Convert Inch to Feet, miles to kilometer with funtion */
 
 /* iches to feet */
-function converter(inches){
-    const feet = inches /12 ;
-    return feet;
+function converter(inches) {
+  const feet = inches / 12;
+  return feet;
 }
 
 const rohanInches = 144;
 const ahadInches = 100;
 const tamjidIches = 120;
 
- var feetResult = converter(tamjidIches);
+var feetResult = converter(tamjidIches);
 //  console.log( "feet:", feetResult);
 
 /* miles to km */
-function mileToFeet (mile){
-    const feet = mile * 1.60934;
-    return feet;
+function mileToFeet(mile) {
+  const feet = mile * 1.60934;
+  return feet;
 }
 
 const myOfiiceToHome = 100;
- var convertedKm = mileToFeet(myOfiiceToHome);
+var convertedKm = mileToFeet(myOfiiceToHome);
 
 //  console.log(convertedKm);
 
- 
- /* Peter's school teacher asked him to write a program that would return true if a number is even and false if a number
+/* Peter's school teacher asked him to write a program that would return true if a number is even and false if a number
 is odd. Help Peter write the program.
 Input:
 The first and second input lines contain the numbers.
@@ -194,29 +179,71 @@ Output:
  Print true if the number is an even number and false if the number is an odd number.
  */
 
-function evenOdd (number){
-   const reminder = number % 2;
-    if (reminder===0){
-        return "even";
-    }
-    else{
-        return "odd";
-    }
+function evenOdd(number) {
+  const reminder = number % 2;
+  if (reminder === 0) {
+    return "even";
+  } else {
+    return "odd";
+  }
 }
 
-const cheackNumber = evenOdd(5)
+const cheackNumber = evenOdd(5);
 // console.log(cheackNumber);
 
 
-function isLeapYear (year){
-    const reminder = year %4;
-    if(reminder===0)
-    return true;
-    else{
-        return false;
-    }
+
+
+/* leap year cheacking function */
+function isLeapYear(year) {
+  const reminder = year % 4;
+  if (reminder === 0) return true;
+  else {
+    return false;
+  }
 }
 
 const input = 1953;
 var results = isLeapYear(input);
-console.log(results);
+// console.log(results);
+
+
+/* sum of an array */
+
+
+function getSumOfAnArray (numbers) {
+    let sum = 0;
+    for(let i=0;i < numbers.length ;i++){
+        const index = i;
+        const element = numbers[index];
+        sum  = sum + element;
+        // console.log(element,sum ); 
+        
+    }
+  return sum;
+
+}
+var myNmumbers = [12, 13, 14, 15, 16, 17, 18];
+getSumOfAnArray(myNmumbers);
+
+
+
+/* sum of odd numbers of an array */
+function getOddNumbersOfAnArray(numbers){
+    const oddNumbers =[];
+    for (let i=0; i<numbers.length; i++){
+        const index = i;
+        const element = numbers[index];
+        if(element % 2 !==0){
+            console.log(index,element);
+            oddNumbers.push(element)
+        }
+    }
+    return oddNumbers;
+}
+var myNmumbers = [12, 13, 14, 15, 16, 17, 18];
+const oddNumbers = getOddNumbersOfAnArray(myNmumbers)
+var oddNumberSum = getSumOfAnArray(oddNumbers); /* previous function */
+
+
+console.log( "odd number sum" , oddNumberSum);
