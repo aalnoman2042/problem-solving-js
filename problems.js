@@ -246,4 +246,31 @@ const oddNumbers = getOddNumbersOfAnArray(myNmumbers)
 var oddNumberSum = getSumOfAnArray(oddNumbers); /* previous function */
 
 
-console.log( "odd number sum" , oddNumberSum);
+// console.log( "odd number sum" , oddNumberSum);
+
+/* factorial of number 7 */
+ function factorial(number){
+    let result = 1;
+    for (let i= 1; i <= number; i++){
+        result = result * i;
+
+    }
+    return result;
+ }
+
+ const ans = factorial(7);
+ console.log(ans);
+
+
+ /* factorial of number 7 in reverse way*/
+ function factorial(number){
+    let result = 1;
+    for (let i= number; i >= 1; i--){
+        result = result * i;
+
+    }
+    return result;
+ }
+
+ const answer = factorial(7);
+ console.log(answer);
