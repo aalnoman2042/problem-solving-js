@@ -273,4 +273,24 @@ var oddNumberSum = getSumOfAnArray(oddNumbers); /* previous function */
  }
 
  const answer = factorial(7);
- console.log(answer);
+//  console.log(answer);
+
+/* remove dublicate items froman array */
+
+const names = ["abul", "tabul","abul", "babubl", "cabul", "jorina", "karina" ,"sokina", "jorina"]
+
+function removeDuplicate(names){
+     const unique =[]
+    for(var i = 0; i < names.length; i++){
+        const name = names[i];
+        console.log(name);
+        if( unique.includes(name) === false){
+            unique.push(name);
+        }
+    }
+    return unique;
+
+}
+
+const uniqueName =removeDuplicate(names);
+//  console.log(uniqueName);
