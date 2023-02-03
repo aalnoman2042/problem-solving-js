@@ -226,7 +226,7 @@ function getOddNumbersOfAnArray(numbers) {
     const index = i;
     const element = numbers[index];
     if (element % 2 !== 0) {
-      console.log(index, element);
+      // console.log(index, element);
       oddNumbers.push(element);
     }
   }
@@ -248,7 +248,7 @@ function factorial(number) {
 }
 
 const ans = factorial(7);
-console.log(ans);
+// console.log(ans);
 
 /* factorial of number 7 in reverse way*/
 function factorial(number) {
@@ -280,7 +280,7 @@ function removeDuplicate(names) {
   const unique = [];
   for (var i = 0; i < names.length; i++) {
     const name = names[i];
-    console.log(name);
+    // console.log(name);
     if (unique.includes(name) === false) {
       unique.push(name);
     }
@@ -298,13 +298,13 @@ const uniqueName = removeDuplicate(names);
 
 for (var i = 1; i <= 50; i++) {
   if (i % 5 === 0 && i % 3 === 0) {
-    console.log("foo bar");
+    // console.log("foo bar");
   } else if (i % 3 === 0) {
-    console.log("foo");
+    // console.log("foo");
   } else if (i % 5 === 0) {
-    console.log("bar");
+    // console.log("bar");
   } else {
-    console.log(i);
+    // console.log(i);
   }
 }
 
@@ -382,4 +382,85 @@ function cheapestPhone(phones){
 }
 
 const myselection = cheapestPhone(phones)
-console.log(myselection);
+// console.log(myselection);
+
+
+
+/* total of all shopping by function */
+const shoppinCart = [
+  {
+    name : "shoe",
+    price : 1200,
+    quantity : 2
+  },
+
+  {
+    name: "shirt",
+    price : 2200,
+    quantity : 5
+  },
+
+  {
+    name: "pant",
+    price : 3700,
+    quantity : 3
+  },
+
+  {
+    name: "belt",
+    price : 200,
+    quantity : 4
+  }
+
+]
+  function totalCost(cost) {
+     var sum =0;
+    for(var i = 0; i < cost.length; i++){
+        const shopping = cost[i];
+        const productTotal = shopping.price * shopping.quantity;
+         sum = productTotal + sum;
+   
+    }
+return sum;
+  } 
+
+  const mySopping = totalCost(shoppinCart);
+  // console.log(mySopping);
+
+
+  /* 
+  1. if ticket number is less then 100 , per ticket price : 100 
+  2. if ticket number is more then 100 , but less than 200. first 100 tickets will be 100/ticket rest tickets will be 90 taka per price 
+  3.if you purchase more than 200 tickets first 100 ---> 100
+  101 -200 ---> 90tk
+  200+ ----> 70tk
+  */
+
+  function ticket(num) {
+      
+
+      if ( num > 200) {
+        var ticketsMoreThan100 = num - 100;
+        var ticketsMoreThan200 = num -200;
+        var priceOf100 = 100*100;
+        var priceOf100_200 = ticketsMoreThan100*90
+        var priceOfMoreThan200 = ticketsMoreThan200*70
+         var totalPriceOfTickts = priceOf100 + priceOf100_200 + priceOfMoreThan200;
+         return totalPriceOfTickts;
+      }
+    else if (num > 100 && num <= 200){
+      var tickets = num - 100;
+      var priceOf100 = 100*100;
+       var totalPriceOfTickts = priceOf100 + tickets*90;
+       return totalPriceOfTickts;
+    }
+    else {
+      var ticketprice = 100;
+      var totalPriceOfTickts  = ticketprice * num;
+      return totalPriceOfTickts;
+     }
+
+  }
+
+  const numberoftickets = ticket(250)
+  console.log( "price of tickets" , numberoftickets);
