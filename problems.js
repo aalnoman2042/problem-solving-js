@@ -191,9 +191,6 @@ function evenOdd(number) {
 const cheackNumber = evenOdd(5);
 // console.log(cheackNumber);
 
-
-
-
 /* leap year cheacking function */
 function isLeapYear(year) {
   const reminder = year % 4;
@@ -207,90 +204,182 @@ const input = 1953;
 var results = isLeapYear(input);
 // console.log(results);
 
-
 /* sum of an array */
 
-
-function getSumOfAnArray (numbers) {
-    let sum = 0;
-    for(let i=0;i < numbers.length ;i++){
-        const index = i;
-        const element = numbers[index];
-        sum  = sum + element;
-        // console.log(element,sum ); 
-        
-    }
+function getSumOfAnArray(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    const index = i;
+    const element = numbers[index];
+    sum = sum + element;
+    // console.log(element,sum );
+  }
   return sum;
-
 }
 var myNmumbers = [12, 13, 14, 15, 16, 17, 18];
 getSumOfAnArray(myNmumbers);
 
-
-
 /* sum of odd numbers of an array */
-function getOddNumbersOfAnArray(numbers){
-    const oddNumbers =[];
-    for (let i=0; i<numbers.length; i++){
-        const index = i;
-        const element = numbers[index];
-        if(element % 2 !==0){
-            console.log(index,element);
-            oddNumbers.push(element)
-        }
+function getOddNumbersOfAnArray(numbers) {
+  const oddNumbers = [];
+  for (let i = 0; i < numbers.length; i++) {
+    const index = i;
+    const element = numbers[index];
+    if (element % 2 !== 0) {
+      console.log(index, element);
+      oddNumbers.push(element);
     }
-    return oddNumbers;
+  }
+  return oddNumbers;
 }
 var myNmumbers = [12, 13, 14, 15, 16, 17, 18];
-const oddNumbers = getOddNumbersOfAnArray(myNmumbers)
+const oddNumbers = getOddNumbersOfAnArray(myNmumbers);
 var oddNumberSum = getSumOfAnArray(oddNumbers); /* previous function */
-
 
 // console.log( "odd number sum" , oddNumberSum);
 
 /* factorial of number 7 */
- function factorial(number){
-    let result = 1;
-    for (let i= 1; i <= number; i++){
-        result = result * i;
+function factorial(number) {
+  let result = 1;
+  for (let i = 1; i <= number; i++) {
+    result = result * i;
+  }
+  return result;
+}
 
-    }
-    return result;
- }
+const ans = factorial(7);
+console.log(ans);
 
- const ans = factorial(7);
- console.log(ans);
+/* factorial of number 7 in reverse way*/
+function factorial(number) {
+  let result = 1;
+  for (let i = number; i >= 1; i--) {
+    result = result * i;
+  }
+  return result;
+}
 
-
- /* factorial of number 7 in reverse way*/
- function factorial(number){
-    let result = 1;
-    for (let i= number; i >= 1; i--){
-        result = result * i;
-
-    }
-    return result;
- }
-
- const answer = factorial(7);
+const answer = factorial(7);
 //  console.log(answer);
 
 /* remove dublicate items froman array */
 
-const names = ["abul", "tabul","abul", "babubl", "cabul", "jorina", "karina" ,"sokina", "jorina"]
+const names = [
+  "abul",
+  "tabul",
+  "abul",
+  "babubl",
+  "cabul",
+  "jorina",
+  "karina",
+  "sokina",
+  "jorina",
+];
 
-function removeDuplicate(names){
-     const unique =[]
-    for(var i = 0; i < names.length; i++){
-        const name = names[i];
-        console.log(name);
-        if( unique.includes(name) === false){
-            unique.push(name);
-        }
+function removeDuplicate(names) {
+  const unique = [];
+  for (var i = 0; i < names.length; i++) {
+    const name = names[i];
+    console.log(name);
+    if (unique.includes(name) === false) {
+      unique.push(name);
     }
-    return unique;
-
+  }
+  return unique;
 }
 
-const uniqueName =removeDuplicate(names);
+const uniqueName = removeDuplicate(names);
 //  console.log(uniqueName);
+
+/* show 1-50
+=> if the number is divisible by 3 then instead  of the number show "foo" 
+=> if the number is divisible by 5 then instead  of the number show "foo" 
+=> if the number is divisible by 3 and 5 then instead  of the number show "foo" */
+
+for (var i = 1; i <= 50; i++) {
+  if (i % 5 === 0 && i % 3 === 0) {
+    console.log("foo bar");
+  } else if (i % 3 === 0) {
+    console.log("foo");
+  } else if (i % 5 === 0) {
+    console.log("bar");
+  } else {
+    console.log(i);
+  }
+}
+
+/* 
+fixed : per items wood requirments
+1. chair --> 3 cft 
+1.table --> 10 cft 
+1. bed --> 50 cft 
+
+vary : quantity
+*/
+
+function woodCalculation(chairQuantity, tableQuantity, bedQuantity) {
+  const perTableWood = 10;
+  const perChairWood = 3;
+  const perBedWood = 50;
+
+  const chairWood = chairQuantity * perChairWood;
+  const tableWood = perTableWood * tableQuantity;
+  const bedWood = perBedWood * bedQuantity;
+
+  const totalwood = chairWood + tableWood + bedWood;
+  return totalwood;
+}
+const totalwood = woodCalculation(2, 2, 5);
+// console.log("total wood required", totalwood);
+
+
+ /* finding cheapest phone in an array and inside of a object */
+const phones = [
+ { name : "samsung",
+  camera : 12,
+  storage : "32gb",
+  price : 36000,
+  color : "silver"} ,
+
+
+  { name : "nokia",
+  camera : 12,
+  storage : "32gb",
+  price : 36000,
+  color : "silver"},
+
+
+  { name : "walton",
+  camera : 12,
+  storage : "32gb",
+  price : 12000,
+  color : "silver"},
+
+  { name : "oppo",
+  camera : 12,
+  storage : "32gb",
+  price : 10000,
+  color : "silver"},
+
+  { name : "xiaomi",
+  camera : 12,
+  storage : "32gb",
+  price : 8000,
+  color : "silver"}
+
+]
+
+function cheapestPhone(phones){
+  let cheapest = phones[0];
+
+  for ( var i =0; i < phones.length; i++ ){
+    const phone = phones[i]
+    if(phone.price < cheapest.price) {
+      cheapest = phone;
+    }
+  } 
+ return cheapest;
+}
+
+const myselection = cheapestPhone(phones)
+console.log(myselection);
