@@ -564,3 +564,136 @@ function positiveNumbers(numbers) {
 const allNumbers = [10, 20, -86, 60, -68, 78, -35, -92]
 const callingFunc = positiveNumbers(allNumbers)
 // console.log(callingFunc);
+
+                                                            /* problem 1 */
+ /* তোমাকে একটা function দেওয়া হবে called mindGame(” যা ইনপুট হিসেবে একটা positive number নিবে।")
+এখন তোমার task : তোমাকে সেই নাম্বার এর সাথে 3 গুন করে, তারপর 10 যোগ করে, তারপর 2 দিয়ে ভাগ করে, তারপর 5 বিয়োগ করে, যা আউটপুট আসবে তা return করতে হবে */
+function mindGame(num) {
+  if (typeof num != "number") {
+    return "please enter a number type data";
+  } else {
+    num = (num * 3 + 10) / 2 - 5;
+
+    return num;
+  }
+}
+
+//  const inputNumber = mindGame(33);
+// console.log(inputNumber);
+
+                                                        /* problem 02 */
+/* তোমাকে একটা function দেওয়া হবে called evenOdd(). এটা ইনপুট হিসেবে একটা string নিবে। 
+
+
+
+এখন তোমার task: String এ total কয়টা character আছে তার উপর ভিত্তি করে আউটপুট দিতে হবে। আউটপুট হবে ‘even’ অথবা ‘odd’  */
+function evenOdd(string) {
+  if (typeof string != "string") {
+    return "please enter a number type data";
+  }
+
+  let char = string.length;
+
+  if (char % 2 === 0) {
+    return "even";
+  } else {
+    return "odd";
+  }
+}
+
+//  const stringGiven = evenOdd("phero")
+//  console.log(stringGiven);
+
+                                            /* problem 03 */
+/* তোমাকে একটা function দেওয়া হবে called “isLGSeven()”. এটা ইনপুট হিসেবে একটা number নিবে।  
+
+
+
+এখন তোমার task: তোমাকে ইনপুট ভ্যালু এবং ৭ এর মধ্যে পার্থক্য বের করতে হবে। যদি এই পার্থক্য ৭ এর চেয়ে ছোট হয়, তখন তোমাকে return করতে হবে সেই বিয়োগফল। নাহলে তোমাকে return করতে হবে double of the input। মানে যে সংখ্যা ইনপুট হিসেবে নিয়েছো সেটির দ্বিগুণ। */
+function isLGSeven(number) {
+  if (typeof number != "number") {
+    return "please enter a number type data";
+  }
+
+  let substracted = number - 7;
+
+  if (substracted < 7) {
+    return substracted;
+  } else {
+    let multiplication = number * 2;
+
+    return multiplication;
+  }
+}
+
+// const takenNumber = isLGSeven(6)
+// console.log(takenNumber);
+
+                                            /* problem 04 */
+  /* 
+  তোমাকে একটা function দেওয়া হবে called findingBadData(). এটা ইনপুট হিসেবে একটা array নিবে। array তে যেকোনো সংখ্যক কতগুলো number থাকবে। number গুলো negative number (less than zero) ও হতে পারে, আবার positive number (greater than or equal to zero) ও হতে পারে। কোনও number যদি negative হয় সেটাকে আমরা বলব “Bad Data”. কোনও number যদি positive হয় সেটাকে আমরা বলব “Good Data”. 
+
+এখন তোমার task: array তে কতগুলো Bad data আছে সেটা খুঁজে বের করতে হবে এবং সেই নাম্বার টা return করতে হবে।
+
+ */
+function findingBadData(data) {
+  if (typeof data != "object") {
+    return "please enter a Array type data";
+  }
+
+  let badData = [];
+
+  for (let i = 0; i < data.length; i++) {
+    let indexValue = data[i];
+    if (indexValue < 0) {
+      badData.push(indexValue);
+    }
+  }
+
+  let totalBadData = badData.length;
+
+  return totalBadData;
+}
+
+// const mixedData =[20, -40, 15, -9, 17, 0, -3, 9];
+// const result = findingBadData(mixedData);
+// console.log(result);
+
+                                                /* problem 05 */
+/* 
+তোমাকে একটা function দেওয়া হবে called gemsToDiamond(). এটা ইনপুট হিসেবে তিনটা number ( তোমাদের ৩ বন্ধুর gems এর সংখ্যা ) নিবে। 
+
+১ম বন্ধুর প্রতি gems এর ক্ষমতা = 21
+
+২য় বন্ধুর প্রতি gems এর ক্ষমতা = 32
+
+৩য় বন্ধুর প্রতি gems এর ক্ষমতা = 43
+
+[ gems এর ক্ষমতা বলতে একটা gems কে কয়টা diamond এ convert করা যাবে সেটা বুঝানো হচ্ছে। ]
+
+এখন তোমার task: সব বন্ধুর gems মিলিয়ে total কতটি diamond পাবে সেটা বের করতে হবে। total diamond এর সংখ্যা যদি 1000 এর দিগুন এর উপর হয়ে যায় সেক্ষেত্রে total diamond থেকে 2000 বাদ দিয়ে যতগুলো diamond অবশিষ্ট থাকবে, ততগুলো তোমরা পাবে।
+*/
+function gemsToDiamond(frnd1, frnd2, frnd3) {
+  if (
+    (typeof frnd1 != "number",
+    typeof frnd2 != "number",
+    typeof frnd3 != "number")
+  ) {
+    return "please enter number type some data";
+  }
+
+  let frnd1Diamod = frnd1 * 21;
+  let frnd2Diamod = frnd2 * 32;
+  let frnd3Diamod = frnd3 * 43;
+  let totaldiamond = frnd1Diamod + frnd2Diamod + frnd3Diamod;
+
+  if (totaldiamond <= 1000 * 2) {
+    return totaldiamond;
+  } else {
+    let substracted = totaldiamond - 2000;
+    return substracted;
+  }
+}
+
+// const gems = gemsToDiamond(100,5,1)
+// console.log(gems);
